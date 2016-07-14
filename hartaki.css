@@ -1,37 +1,28 @@
-
-
 body {
-
   font-family: 'Yantramanav', sans-serif;
-  padding: 20px;
-  /* background-image: url('../img/pattern1.png'); */
+  padding: 20px;  /* background-image: url('../img/pattern1.png'); */
   background-image: url('../img/AdobeStock_81190179.jpeg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
   background-position: top;
-
 }
-
-      #img-div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 80%;
-        height: auto;
-        opacity: 0.8;
-        max-width: 1200px;
-        z-index: -99991000;
-
-      }
-
-      #img-div img {
-          width: 130%;
+#img-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: auto;
+  opacity: 0.8;
+  max-width: 1200px;
+  z-index: -99991000;
+}
+#img-div img {
+  width: 130%;
   padding-top: 20px;
-      }
-
-      .hartaki-3d-base {
-        background-image: url("main.jpeg");
+}
+.hartaki-3d-base {
+  background-image: url("main.jpeg");
   padding: 10px;
   max-width: 800px;
   min-width: 300px;
@@ -45,40 +36,26 @@ body {
   background-size: 420%;
   background-position: center;
   opacity: 0.8;
-  box-shadow: 20px 20px 11px rgba(0,100,55,0.3);
-
-        
-      }
-
-      .client-logo img {
-        width: 200px;
-      }
-
+  box-shadow: 20px 20px 11px rgba(0, 100, 55, 0.3);
+}
+.client-logo img {
+  width: 200px;
+}
 .client-box {
   background: white;
   position: absolute;
   opacity: 1;
   padding: 10px;
   font-size: medium;
-
-
 }
-      .hartaki-3d-base a {
-        font-weight: 900;
-      }
-
-      a {
-        
-        color: black;
-        
-      }
-
-      .hartaki-3d-base a {
-      }
-
-
-
-      #project-audi-hidden {
-        display: none;
-      }
-
+.hartaki-3d-base a {
+  font-weight: 900;
+}
+a {
+  color: black;
+}
+.hartaki-3d-base a {
+}
+#project-audi-hidden {
+  display: none;
+}

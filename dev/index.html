@@ -5,254 +5,198 @@
         <title>hartaki</title>
         <script src="phaser.min.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-
-<script src="hartaki.js"></script>
-    <style type="text/css">
+        <script src="hartaki.js"></script>
+        <style type="text/css">
         body {
-            padding: 30px;
-            margin: 0;
-            background-image: url(hartaki.jpeg);
-font-family: Helvetica, arial, serif;
-
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100%;
-  background-position: top;
+        padding: 30px;
+        margin: 0;
+        background-image: url(hartaki.jpeg);
+        font-family: Helvetica, arial, serif;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+        background-position: top;
         }
-
         canvas {
-            width: 1200px;
-            height: 850px;
-            margin: auto;
-
+        width: 1200px;
+        height: 850px;
+        margin: auto;
         }
-    </style>
-
+        </style>
     </head>
     <body>
         Hartaki.nyc <br/>
         <br/>
-        <pre>
-            lsof    12642 pwxxhon    2u      CHR  136,1       0t0          4 /dev/pts/1
-lsof    12642 pwxxhon    3r      DIR    0,3         0          1 /proc
-lsof    12642 pwxxhon    4r      DIR    0,3         0 1471170884 /proc/12642/fd
-lsof    12642 pwxxhon    5w     FIFO    0,8       0t0 1471170889 pipe
-lsof    12642 pwxxhon    6r     FIFO    0,8       0t0 1471170890 pipe
-lsof    12643 pwxxhon  cwd       DIR   8,17     16384  712104252 /home/pwxxhon
-lsof    12643 pwxxhon  rtd       DIR    8,1      4096          2 /
-lsof    12643 pwxxhon  txt       REG    8,1    131312     144723 /usr/bin/lsof
-lsof    12643 pwxxhon  mem       REG    8,1 114310928     172172 /usr/lib/locale/locale-archive
-lsof    12643 pwxxhon  mem       REG    8,1   1807032     265191 /lib/x86_64-linux-gnu/libc-2.15.so
-lsof    12643 pwxxhon  mem       REG    8,1    149280     265204 /lib/x86_64-linux-gnu/ld-2.15.so
-lsof    12643 pwxxhon    4r     FIFO    0,8       0t0 1471170889 pipe
-lsof    12643 pwxxhon    7w     FIFO    0,8       0t0 1471170890 pipe
-sshd    26288 pwxxhon  cwd   unknown                             /proc/26288/cwd (readlink: Permission denied)
-sshd    26288 pwxxhon  rtd   unknown                             /proc/26288/root (readlink: Permission denied)
-sshd    26288 pwxxhon  txt   unknown                             /proc/26288/exe (readlink: Permission denied)
-sshd    26288 pwxxhon    0w  unknown                             /proc/26288/fd/0 (readlink: Permission denied)
-sshd    26288 pwxxhon    1w  unknown                             /proc/26288/fd/1 (readlink: Permission denied)
-sshd    26288 pwxxhon    2w  unknown                             /proc/26288/fd/2 (readlink: Permission denied)
-sshd    26288 pwxxhon    3w  unknown                             /proc/26288/fd/3 (readlink: Permission denied)
-sshd    26288 pwxxhon    4w  unknown                             /proc/26288/fd/4 (readlink: Permission denied)
-sshd    26288 pwxxhon    5w  unknown                             /proc/26288/fd/5 (readlink: Permission denied)
-sshd    26288 pwxxhon    6w  unknown                             /proc/26288/fd/6 (readlink: Permission denied)
-sshd    26288 pwxxhon    7w  unknown                             /proc/26288/fd/7 (readlink: Permission denied)
-sshd    26288 pwxxhon    8w  unknown                             /proc/26288/fd/8 (readlink: Permission denied)
-sshd    26288 pwxxhon    9w  unknown                             /proc/26288/fd/9 (readlink: Permission denied)
-sshd    26288 pwxxhon   11w  unknown                             /proc/26288/fd/11 (readlink: Permission denied)
-sshd    26288 pwxxhon   12w  unknown                             /proc/26288/fd/12 (readlink: Permission denied)
-bash    26291 pwxxhon  cwd       DIR   8,17     16384  712104252 /home/pwxxhon
-bash    26291 pwxxhon  rtd       DIR    8,1      4096          2 /
-bash    26291 pwxxhon  txt       REG    8,1    959120     783362 /bin/bash
-bash    26291 pwxxhon  mem       REG    8,1     52120     265208 /lib/x86_64-linux-gnu/libnss_files-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1     47680     265171 /lib/x86_64-linux-gnu/libnss_nis-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1     97248     265196 /lib/x86_64-linux-gnu/libnsl-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1     35680     265206 /lib/x86_64-linux-gnu/libnss_compat-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1 114310928     172172 /usr/lib/locale/locale-archive
-bash    26291 pwxxhon  mem       REG    8,1   1807032     265191 /lib/x86_64-linux-gnu/libc-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1     14768     265169 /lib/x86_64-linux-gnu/libdl-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1    159200     261228 /lib/x86_64-linux-gnu/libtinfo.so.5.9
-bash    26291 pwxxhon  mem       REG    8,1    149280     265204 /lib/x86_64-linux-gnu/ld-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1     26258     131202 /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
-bash    26291 pwxxhon    0u      CHR  136,1       0t0          4 /dev/pts/1
-bash    26291 pwxxhon    1u      CHR  136,1       0t0          4 /dev/pts/1
-bash    26291 pwxxhon    2u      CHR  136,1       0t0          4 /dev/pts/1
-bash    26291 pwxxhon  255u      CHR  136,1       0t0          4 /dev/pts/1</pre>
-
-    <div id="bla"></div>
-    <script type="text/javascript">
-
-    window.onload = function() {
-
-var game = new Phaser.Game(
-    1200, 1850, 
-    Phaser.AUTO, 
-    'bla',
-     { preload: preload, create: create, update: update }, true);
-
-function preload() {
-
-    game.load.image('star', 'reveal2.png');
-    
-
-
-}
-
-var stars;
-var waveformX;
-var waveformY;
-
-var xl;
-var yl;
-
-var cx = 0;
-var cy = 0;
-var xs = 28;
-var ys = 122;
-var ymax = 88;
-var xmax = 58;
-var xrange = 18;
-var yrange = 29;
-
-
-function create() {
-
-    //  Generate our motion data
-    var sprite = { x: 110, y: -64 };
-
-
-    var tween = game.add.tween(sprite).to( { x: xrange }, 12000, "Bounce.easeIn", true, 0, -1, true);
-    var tween2 = game.add.tween(sprite).to( { y: yrange }, 4000, "Bounce.easeOut", true, 0, -1, false);
-
-    waveformX = tween.generateData(1.4);
-    waveformY = tween2.generateData(26);
-
-    xl = waveformX.length - 1;
-    yl = waveformY.length - 1;
-
-    var sprites = game.add.spriteBatch();
-
-    stars = [];
-
-
-
-
-
-    for (var y = 0; y <ymax; y++)
-    {
+                <pre>
+                        lsof    12642 pwxxhon    2u      CHR  136,1       0t0          4 /dev/pts/1
+            lsof    12642 pwxxhon    3r      DIR    0,3         0          1 /proc
+            lsof    12642 pwxxhon    4r      DIR    0,3         0 1471170884 /proc/12642/fd
+            lsof    12642 pwxxhon    5w     FIFO    0,8       0t0 1471170889 pipe
+            lsof    12642 pwxxhon    6r     FIFO    0,8       0t0 1471170890 pipe
+            lsof    12643 pwxxhon  cwd       DIR   8,17     16384  712104252 /home/pwxxhon
+            lsof    12643 pwxxhon  rtd       DIR    8,1      4096          2 /
+            lsof    12643 pwxxhon  txt       REG    8,1    131312     144723 /usr/bin/lsof
+            lsof    12643 pwxxhon  mem       REG    8,1 114310928     172172 /usr/lib/locale/locale-archive
+            lsof    12643 pwxxhon  mem       REG    8,1   1807032     265191 /lib/x86_64-linux-gnu/libc-2.15.so
+            lsof    12643 pwxxhon  mem       REG    8,1    149280     265204 /lib/x86_64-linux-gnu/ld-2.15.so
+            lsof    12643 pwxxhon    4r     FIFO    0,8       0t0 1471170889 pipe
+            lsof    12643 pwxxhon    7w     FIFO    0,8       0t0 1471170890 pipe
+            sshd    26288 pwxxhon  cwd   unknown                             /proc/26288/cwd (readlink: Permission denied)
+            sshd    26288 pwxxhon  rtd   unknown                             /proc/26288/root (readlink: Permission denied)
+            sshd    26288 pwxxhon  txt   unknown                             /proc/26288/exe (readlink: Permission denied)
+            sshd    26288 pwxxhon    0w  unknown                             /proc/26288/fd/0 (readlink: Permission denied)
+            sshd    26288 pwxxhon    1w  unknown                             /proc/26288/fd/1 (readlink: Permission denied)
+            sshd    26288 pwxxhon    2w  unknown                             /proc/26288/fd/2 (readlink: Permission denied)
+            sshd    26288 pwxxhon    3w  unknown                             /proc/26288/fd/3 (readlink: Permission denied)
+            sshd    26288 pwxxhon    4w  unknown                             /proc/26288/fd/4 (readlink: Permission denied)
+            sshd    26288 pwxxhon    5w  unknown                             /proc/26288/fd/5 (readlink: Permission denied)
+            sshd    26288 pwxxhon    6w  unknown                             /proc/26288/fd/6 (readlink: Permission denied)
+            sshd    26288 pwxxhon    7w  unknown                             /proc/26288/fd/7 (readlink: Permission denied)
+            sshd    26288 pwxxhon    8w  unknown                             /proc/26288/fd/8 (readlink: Permission denied)
+            sshd    26288 pwxxhon    9w  unknown                             /proc/26288/fd/9 (readlink: Permission denied)
+            sshd    26288 pwxxhon   11w  unknown                             /proc/26288/fd/11 (readlink: Permission denied)
+            sshd    26288 pwxxhon   12w  unknown                             /proc/26288/fd/12 (readlink: Permission denied)
+            bash    26291 pwxxhon  cwd       DIR   8,17     16384  712104252 /home/pwxxhon
+            bash    26291 pwxxhon  rtd       DIR    8,1      4096          2 /
+            bash    26291 pwxxhon  txt       REG    8,1    959120     783362 /bin/bash
+            bash    26291 pwxxhon  mem       REG    8,1     52120     265208 /lib/x86_64-linux-gnu/libnss_files-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1     47680     265171 /lib/x86_64-linux-gnu/libnss_nis-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1     97248     265196 /lib/x86_64-linux-gnu/libnsl-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1     35680     265206 /lib/x86_64-linux-gnu/libnss_compat-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1 114310928     172172 /usr/lib/locale/locale-archive
+            bash    26291 pwxxhon  mem       REG    8,1   1807032     265191 /lib/x86_64-linux-gnu/libc-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1     14768     265169 /lib/x86_64-linux-gnu/libdl-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1    159200     261228 /lib/x86_64-linux-gnu/libtinfo.so.5.9
+            bash    26291 pwxxhon  mem       REG    8,1    149280     265204 /lib/x86_64-linux-gnu/ld-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1     26258     131202 /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+            bash    26291 pwxxhon    0u      CHR  136,1       0t0          4 /dev/pts/1
+            bash    26291 pwxxhon    1u      CHR  136,1       0t0          4 /dev/pts/1
+            bash    26291 pwxxhon    2u      CHR  136,1       0t0          4 /dev/pts/1
+        bash    26291 pwxxhon  255u      CHR  136,1       0t0          4 /dev/pts/1</pre>
+        <div id="bla"></div>
+        <script type="text/javascript">
+        window.onload = function() {
+        var game = new Phaser.Game(
+        1200, 1850,
+        Phaser.AUTO,
+        'bla',
+        { preload: preload, create: create, update: update }, true);
+        function preload() {
+        game.load.image('star', 'reveal2.png');
+        
+        }
+        var stars;
+        var waveformX;
+        var waveformY;
+        var xl;
+        var yl;
+        var cx = 0;
+        var cy = 0;
+        var xs = 28;
+        var ys = 122;
+        var ymax = 88;
+        var xmax = 58;
+        var xrange = 18;
+        var yrange = 29;
+        function create() {
+        //  Generate our motion data
+        var sprite = { x: 110, y: -64 };
+        var tween = game.add.tween(sprite).to( { x: xrange }, 12000, "Bounce.easeIn", true, 0, -1, true);
+        var tween2 = game.add.tween(sprite).to( { y: yrange }, 4000, "Bounce.easeOut", true, 0, -1, false);
+        waveformX = tween.generateData(1.4);
+        waveformY = tween2.generateData(26);
+        xl = waveformX.length - 1;
+        yl = waveformY.length - 1;
+        var sprites = game.add.spriteBatch();
+        stars = [];
+        for (var y = 0; y <ymax; y++)
+        {
         for (var x = 0; x < xmax; x++)
         {
-            var star = game.make.sprite((x * xs), (y * ys), 'star');
-
-            //game.add.existing(star);
-            
-
-            star.ox = star.x;
-            star.oy = star.y;
-
-            star.cx = game.rnd.between(0, xl);
-            star.cy = game.rnd.between(0, yl);
-
-            star.anchor.set(0.5);
-
-
-            if(game.rnd.integerInRange(0,10) > 2) {
-
-                star.scale.setTo(0.5);
-            } else {
-                //star.scale.setTo(0.5);
-            }
-
-            
-
-
-
-            sprites.addChild(star);
-
-            stars.push(star);
+        var star = game.make.sprite((x * xs), (y * ys), 'star');
+        //game.add.existing(star);
+        
+        star.ox = star.x;
+        star.oy = star.y;
+        star.cx = game.rnd.between(0, xl);
+        star.cy = game.rnd.between(0, yl);
+        star.anchor.set(0.5);
+        if(game.rnd.integerInRange(0,10) > 2) {
+        star.scale.setTo(0.5);
+        } else {
+        //star.scale.setTo(0.5);
         }
-    }
-
-}
-
-function update() {
-
-    for (var i = 0, len = stars.length; i < len; i++)
-    {
+        
+        sprites.addChild(star);
+        stars.push(star);
+        }
+        }
+        }
+        function update() {
+        for (var i = 0, len = stars.length; i < len; i++)
+        {
         stars[i].x = stars[i].ox + waveformX[stars[i].cx].x;
         stars[i].y = stars[i].oy + waveformY[stars[i].cy].y;
-
         stars[i].cx++;
-
         if (stars[i].cx > xl)
         {
-            stars[i].cx = 0;
+        stars[i].cx = 0;
         }
-
         stars[i].cy++;
-
         if (stars[i].cy > yl)
         {
-            stars[i].cy = 0;
+        stars[i].cy = 0;
         }
-    }
-
-}
-
-//-----
-
-
-
-    };
-
-    </script>
-
-
- <pre>
-         lsof    12642 pwxxhon    2u      CHR  136,1       0t0          4 /dev/pts/1
-lsof    12642 pwxxhon    3r      DIR    0,3         0          1 /proc
-lsof    12642 pwxxhon    4r      DIR    0,3         0 1471170884 /proc/12642/fd
-lsof    12642 pwxxhon    5w     FIFO    0,8       0t0 1471170889 pipe
-lsof    12642 pwxxhon    6r     FIFO    0,8       0t0 1471170890 pipe
-lsof    12643 pwxxhon  cwd       DIR   8,17     16384  712104252 /home/pwxxhon
-lsof    12643 pwxxhon  rtd       DIR    8,1      4096          2 /
-lsof    12643 pwxxhon  txt       REG    8,1    131312     144723 /usr/bin/lsof
-lsof    12643 pwxxhon  mem       REG    8,1 114310928     172172 /usr/lib/locale/locale-archive
-lsof    12643 pwxxhon  mem       REG    8,1   1807032     265191 /lib/x86_64-linux-gnu/libc-2.15.so
-lsof    12643 pwxxhon  mem       REG    8,1    149280     265204 /lib/x86_64-linux-gnu/ld-2.15.so
-lsof    12643 pwxxhon    4r     FIFO    0,8       0t0 1471170889 pipe
-lsof    12643 pwxxhon    7w     FIFO    0,8       0t0 1471170890 pipe
-sshd    26288 pwxxhon  cwd   unknown                             /proc/26288/cwd (readlink: Permission denied)
-sshd    26288 pwxxhon  rtd   unknown                             /proc/26288/root (readlink: Permission denied)
-sshd    26288 pwxxhon  txt   unknown                             /proc/26288/exe (readlink: Permission denied)
-sshd    26288 pwxxhon    0w  unknown                             /proc/26288/fd/0 (readlink: Permission denied)
-sshd    26288 pwxxhon    1w  unknown                             /proc/26288/fd/1 (readlink: Permission denied)
-sshd    26288 pwxxhon    2w  unknown                             /proc/26288/fd/2 (readlink: Permission denied)
-sshd    26288 pwxxhon    3w  unknown                             /proc/26288/fd/3 (readlink: Permission denied)
-sshd    26288 pwxxhon    4w  unknown                             /proc/26288/fd/4 (readlink: Permission denied)
-sshd    26288 pwxxhon    5w  unknown                             /proc/26288/fd/5 (readlink: Permission denied)
-sshd    26288 pwxxhon    6w  unknown                             /proc/26288/fd/6 (readlink: Permission denied)
-sshd    26288 pwxxhon    7w  unknown                             /proc/26288/fd/7 (readlink: Permission denied)
-sshd    26288 pwxxhon    8w  unknown                             /proc/26288/fd/8 (readlink: Permission denied)
-sshd    26288 pwxxhon    9w  unknown                             /proc/26288/fd/9 (readlink: Permission denied)
-sshd    26288 pwxxhon   11w  unknown                             /proc/26288/fd/11 (readlink: Permission denied)
-sshd    26288 pwxxhon   12w  unknown                             /proc/26288/fd/12 (readlink: Permission denied)
-bash    26291 pwxxhon  cwd       DIR   8,17     16384  712104252 /home/pwxxhon
-bash    26291 pwxxhon  rtd       DIR    8,1      4096          2 /
-bash    26291 pwxxhon  txt       REG    8,1    959120     783362 /bin/bash
-bash    26291 pwxxhon  mem       REG    8,1     52120     265208 /lib/x86_64-linux-gnu/libnss_files-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1     47680     265171 /lib/x86_64-linux-gnu/libnss_nis-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1     97248     265196 /lib/x86_64-linux-gnu/libnsl-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1     35680     265206 /lib/x86_64-linux-gnu/libnss_compat-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1 114310928     172172 /usr/lib/locale/locale-archive
-bash    26291 pwxxhon  mem       REG    8,1   1807032     265191 /lib/x86_64-linux-gnu/libc-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1     14768     265169 /lib/x86_64-linux-gnu/libdl-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1    159200     261228 /lib/x86_64-linux-gnu/libtinfo.so.5.9
-bash    26291 pwxxhon  mem       REG    8,1    149280     265204 /lib/x86_64-linux-gnu/ld-2.15.so
-bash    26291 pwxxhon  mem       REG    8,1     26258     131202 /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
-bash    26291 pwxxhon    0u      CHR  136,1       0t0          4 /dev/pts/1
-bash    26291 pwxxhon    1u      CHR  136,1       0t0          4 /dev/pts/1
-bash    26291 pwxxhon    2u      CHR  136,1       0t0          4 /dev/pts/1
-bash    26291 pwxxhon  255u      CHR  136,1       0t0          4 /dev/pts/1</pre>
+        }
+        }
+        //-----
+        };
+        </script>
+         <pre>
+                     lsof    12642 pwxxhon    2u      CHR  136,1       0t0          4 /dev/pts/1
+            lsof    12642 pwxxhon    3r      DIR    0,3         0          1 /proc
+            lsof    12642 pwxxhon    4r      DIR    0,3         0 1471170884 /proc/12642/fd
+            lsof    12642 pwxxhon    5w     FIFO    0,8       0t0 1471170889 pipe
+            lsof    12642 pwxxhon    6r     FIFO    0,8       0t0 1471170890 pipe
+            lsof    12643 pwxxhon  cwd       DIR   8,17     16384  712104252 /home/pwxxhon
+            lsof    12643 pwxxhon  rtd       DIR    8,1      4096          2 /
+            lsof    12643 pwxxhon  txt       REG    8,1    131312     144723 /usr/bin/lsof
+            lsof    12643 pwxxhon  mem       REG    8,1 114310928     172172 /usr/lib/locale/locale-archive
+            lsof    12643 pwxxhon  mem       REG    8,1   1807032     265191 /lib/x86_64-linux-gnu/libc-2.15.so
+            lsof    12643 pwxxhon  mem       REG    8,1    149280     265204 /lib/x86_64-linux-gnu/ld-2.15.so
+            lsof    12643 pwxxhon    4r     FIFO    0,8       0t0 1471170889 pipe
+            lsof    12643 pwxxhon    7w     FIFO    0,8       0t0 1471170890 pipe
+            sshd    26288 pwxxhon  cwd   unknown                             /proc/26288/cwd (readlink: Permission denied)
+            sshd    26288 pwxxhon  rtd   unknown                             /proc/26288/root (readlink: Permission denied)
+            sshd    26288 pwxxhon  txt   unknown                             /proc/26288/exe (readlink: Permission denied)
+            sshd    26288 pwxxhon    0w  unknown                             /proc/26288/fd/0 (readlink: Permission denied)
+            sshd    26288 pwxxhon    1w  unknown                             /proc/26288/fd/1 (readlink: Permission denied)
+            sshd    26288 pwxxhon    2w  unknown                             /proc/26288/fd/2 (readlink: Permission denied)
+            sshd    26288 pwxxhon    3w  unknown                             /proc/26288/fd/3 (readlink: Permission denied)
+            sshd    26288 pwxxhon    4w  unknown                             /proc/26288/fd/4 (readlink: Permission denied)
+            sshd    26288 pwxxhon    5w  unknown                             /proc/26288/fd/5 (readlink: Permission denied)
+            sshd    26288 pwxxhon    6w  unknown                             /proc/26288/fd/6 (readlink: Permission denied)
+            sshd    26288 pwxxhon    7w  unknown                             /proc/26288/fd/7 (readlink: Permission denied)
+            sshd    26288 pwxxhon    8w  unknown                             /proc/26288/fd/8 (readlink: Permission denied)
+            sshd    26288 pwxxhon    9w  unknown                             /proc/26288/fd/9 (readlink: Permission denied)
+            sshd    26288 pwxxhon   11w  unknown                             /proc/26288/fd/11 (readlink: Permission denied)
+            sshd    26288 pwxxhon   12w  unknown                             /proc/26288/fd/12 (readlink: Permission denied)
+            bash    26291 pwxxhon  cwd       DIR   8,17     16384  712104252 /home/pwxxhon
+            bash    26291 pwxxhon  rtd       DIR    8,1      4096          2 /
+            bash    26291 pwxxhon  txt       REG    8,1    959120     783362 /bin/bash
+            bash    26291 pwxxhon  mem       REG    8,1     52120     265208 /lib/x86_64-linux-gnu/libnss_files-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1     47680     265171 /lib/x86_64-linux-gnu/libnss_nis-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1     97248     265196 /lib/x86_64-linux-gnu/libnsl-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1     35680     265206 /lib/x86_64-linux-gnu/libnss_compat-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1 114310928     172172 /usr/lib/locale/locale-archive
+            bash    26291 pwxxhon  mem       REG    8,1   1807032     265191 /lib/x86_64-linux-gnu/libc-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1     14768     265169 /lib/x86_64-linux-gnu/libdl-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1    159200     261228 /lib/x86_64-linux-gnu/libtinfo.so.5.9
+            bash    26291 pwxxhon  mem       REG    8,1    149280     265204 /lib/x86_64-linux-gnu/ld-2.15.so
+            bash    26291 pwxxhon  mem       REG    8,1     26258     131202 /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+            bash    26291 pwxxhon    0u      CHR  136,1       0t0          4 /dev/pts/1
+            bash    26291 pwxxhon    1u      CHR  136,1       0t0          4 /dev/pts/1
+            bash    26291 pwxxhon    2u      CHR  136,1       0t0          4 /dev/pts/1
+        bash    26291 pwxxhon  255u      CHR  136,1       0t0          4 /dev/pts/1</pre>
     </body>
 </html>
