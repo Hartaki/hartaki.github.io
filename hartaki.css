@@ -1,12 +1,23 @@
+html { 
+  background: url('../img/AdobeStock_81190179.jpeg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
   font-family: 'Yantramanav', sans-serif;
   padding: 20px;  /* background-image: url('../img/pattern1.png'); */
-  background-image: url('../img/AdobeStock_81190179.jpeg');
+  /* background-image: url('../img/AdobeStock_81190179.jpeg'); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
   background-position: top;
 }
+
+
+
 #img-div {
   position: absolute;
   top: 0;
