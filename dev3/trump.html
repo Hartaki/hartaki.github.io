@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>hartaki</title>
+        <script src="phaser.min.js"></script>
+        <script src="hartaki.js"></script>
+        <style type="text/css">
+            main {
+                overflow: hidden;
+            }
+            body {
+                margin: 0;
+
+                font-family: Helvetica, arial, serif;
+
+                background:
+                        url(trump_speech2.jpg) left top no-repeat,
+                        /*url(trump_speech2.jpg) left center no-repeat,*/
+                        url(trump_speech2.jpg) left bottom no-repeat,
+                        /*url(trump_speech2.jpg) center top no-repeat,*/
+                        /*url(trump_speech2.jpg) center center no-repeat,*/
+                        /*url(trump_speech2.jpg) center bottom no-repeat,*/
+                        url(trump_speech2.jpg) right top no-repeat,
+                        /*url(trump_speech2.jpg) right center no-repeat,*/
+                        url(trump_speech2.jpg) right bottom no-repeat;
+
+                animation-name: pulse;
+                animation-duration: .05s;
+                animation-iteration-count: infinite;
+                /*transform: rotate(45deg);*/
+            }
+
+            canvas {
+                animation-name: example;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+
+            #bla {
+                animation-name: pulse;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                transform: rotate(45deg);
+            }
+
+            @keyframes pulse {
+                0% {
+                    background-blend-mode: screen;
+                }
+                50  % {
+                    background-blend-mode: color-dodge;
+                }
+                60  % {
+                    background-blend-mode: multiply;
+                }
+                70  % {
+                    background-blend-mode: screen;
+                }
+                80  % {
+                    background-blend-mode: color-dodge;
+                }
+                90  % {
+                    background-blend-mode: color-dodge;
+                }
+                100% {
+                    background-blend-mode: multiply;
+                }
+            }
+
+            @keyframes example {
+                from {
+                    opacity: 1;
+                    transform: rotate(0deg);
+                }
+                to {
+                    opacity: .25;
+                    transform: rotate(359deg)
+                }
+            }
+
+
+        </style>
+    </head>
+    <body>
+        Hartaki.nyc <br/>
+
+    <div id="bla"></div>
+    <script type="text/javascript">
+
+        window.onload = function() {
+
+            var game = new Phaser.Game(
+            '100vw', '100vw',
+            Phaser.AUTO,
+            'bla',
+             { preload: preload, create: create, update: update }, true);
+
+            function preload() {
+
+            game.load.image('star', 'trump_speech_xs.png');
+        }
+
+        var stars;
+        var waveformX;
+        var waveformY;
+
+        var xl;
+        var yl;
+
+        var cx = 0;
+        var cy = 0;
+        var xs = 100;
+        var ys = 10;
+        var xmax = 10;
+        var ymax = 10;
+
+        var xrange = 50000;
+        var yrange = 700;
+
+
+        function create() {
+
+            //  Generate our motion data
+            var sprite = { x: 1, y: 1 };
+
+
+            var tween = game.add.tween(sprite).to( { x: xrange }, 6000, "Bounce.easeIn", true, 0, -1, true);
+            var tween2 = game.add.tween(sprite).to( { y: yrange }, 40000, "Bounce.easeOut", true, 0, -1, false);
+
+            waveformX = tween.generateData(1000);
+            waveformY = tween2.generateData(100);
+
+            xl = waveformX.length - 1;
+            yl = waveformY.length - 1;
+
+            var sprites = game.add.spriteBatch();
+
+            stars = [];
+
+            for (var y = 0; y <ymax; y++) {
+                for (var x = 0; x < xmax; x++) {
+                    var star = game.make.sprite((x * xs), (y * ys), 'star');
+
+                    //game.add.existing(star);
+
+                    star.ox = star.x;
+                    star.oy = star.y;
+
+                    star.cx = game.rnd.between(0, xl);
+                    star.cy = game.rnd.between(0, yl);
+
+                    star.anchor.set(0.5);
+
+
+                    if(game.rnd.integerInRange(0,10) > 2) {
+
+                        star.scale.setTo(0.5);
+                    } else {
+                        star.scale.setTo(0.5);
+                    }
+
+                    sprites.addChild(star);
+                    stars.push(star);
+                }
+            }
+
+        }
+
+        function update() {
+
+            for (var i = 0, len = stars.length; i < len; i++) {
+                stars[i].x = stars[i].ox + waveformX[stars[i].cx].x;
+                stars[i].y = stars[i].oy + waveformY[stars[i].cy].y;
+
+                stars[i].cx++;
+
+                if (stars[i].cx > xl)
+                {
+                    stars[i].cx = 0;
+                }
+
+                stars[i].cy++;
+
+                if (stars[i].cy > yl)
+                {
+                    stars[i].cy = 0;
+                }
+            }
+
+
+        }
+    };
+
+    </script>
+        <script>
+
+        </script>
+    </body>
+</html>
