@@ -57,7 +57,9 @@ a {
 }
 
 #img-div img {
-width: 80%;
-margin: auto;
-opacity: 0.5;
+  width: 50%;
+  margin-left: 23%;
+  opacity: 1;
+  position: absolute;
+  z-index: -899999970;
 }
