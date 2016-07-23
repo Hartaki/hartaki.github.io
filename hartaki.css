@@ -1,5 +1,5 @@
 html { 
-  background: url('../img/AdobeStock_81190179.jpeg') no-repeat center center fixed; 
+  background: url('./main.jpeg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
