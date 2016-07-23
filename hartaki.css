@@ -16,11 +16,11 @@ body {
   background-position: top;
 	background-color: #fff;
   margin: auto;
-  text-shadow: 52px 42px 55px #008000;
+  text-shadow: 9px 53px 26px #008000;
   z-index: 1781;
   position: absolute;
   width: 100%;
-  
+  font-size: 400%; 
 
 }
 
