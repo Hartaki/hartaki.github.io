@@ -14,6 +14,14 @@ body {
   background-attachment: fixed;
   background-size: 100%;
   background-position: top;
+	background-color: #fff;
+  margin: auto;
+  text-shadow: 52px 42px 55px #008000;
+  z-index: 1781;
+  position: absolute;
+  width: 100%;
+  
+
 }
 
 
