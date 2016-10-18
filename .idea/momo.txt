@@ -1,0 +1,42 @@
+a
+ng-init
+
+
+.delay()
+
+,dragTo
+
+console.log("")
+
+.random()
+
+for()
+
+
+// every drone initializes an angular app with ISIS SDK that targets a random angular module at the Google Conference
+// 
+Drones.forEach(ISIS SDK, Google Conference, function(){
+		
+	this.target = Google Conference.random(angular.module);
+
+	return ng-init(target);
+
+});
+
+//every player gets a random airbnb
+pokergame.random(airbnb);
+
+//remove all kazys thiel from each hand
+players.forEach(splice(kazys thiel);
+
+
+require('ISIS SDK');
+
+var isis = ISIS_SDK;
+
+
+isis.
+
+
+
+
